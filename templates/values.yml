@@ -1,0 +1,9 @@
+database:
+  type: postgres
+  host: softeam-postgres.postgresql.svc.cluster.local
+  port: 5432
+  dbname: metabase
+  username: metabase
+  password: oLco9Pi76loy0ikl0gkCXKSWiK1FWvOfgaZyFuWGibbrfV9qGzPHTgwVLB8V6shy
+service:
+  type: NodePort

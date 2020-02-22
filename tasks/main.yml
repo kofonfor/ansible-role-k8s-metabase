@@ -1,0 +1,5 @@
+- name: put values
+  template: src=values.yml dest=/tmp/metabase-{{ metabase_helm_release }}.yml
+
+- name: upgrade {{ metabase_helm_release }} release using a Helm chart
+  command: helm upgrade {{ metabase_helm_release }} stable/metabase --install --namespace {{ k8s_namespace }} -f /tmp/metabase-{{ metabase_helm_release }}.yml
